@@ -30,7 +30,7 @@ pip install https://github.com/laws-africa/django-sass-processor-dart-sass
 
 That's it. Install and use `django-sass-processor` as normal.
 
-# Advanced used
+# Advanced usage
 
 If you need to change the `sass` command, override it like so:
 
