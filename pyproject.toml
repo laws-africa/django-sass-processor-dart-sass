@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-sass-processor-dart-sass"
+version = "0.0.1"
+authors = [
+  { name="Greg Kempe", email="greg@laws.africa" },
+]
+description = "A drop-in replacement for sass for use with django-sass-processor that uses dart sass rather than libsass"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/laws-africa/django-sass-processor-dart-sass"
+"Bug Tracker" = "https://github.com/laws-africa/django-sass-processor-dart-sass/issues"
