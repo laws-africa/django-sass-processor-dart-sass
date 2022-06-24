@@ -1,13 +1,11 @@
 import subprocess
 from tempfile import NamedTemporaryFile
 
-from django.conf import settings
-
 
 class DartSass:
     """ A shim that replaces libsass with Dart Sass, primarily aimed at django-sass-processor.
     """
-    sass_command = 'sass'
+    sass_command = ['sass']
 
     def compile(self, filename, include_paths, **kwargs):
         # build up include paths
@@ -15,11 +13,10 @@ class DartSass:
         includes = [p for pp in includes for p in pp]
 
         with NamedTemporaryFile() as outf:
-            cmd = [
-                getattr(settings, 'SASS_COMMAND', None) or self.sass_command,
+            cmd = self.sass_command + [
                 filename + ":" + outf.name,
                 *includes,
-                ]
+            ]
 
             try:
                 subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)

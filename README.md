@@ -36,5 +36,8 @@ If you need to change the `sass` command, override it like so:
 
 ```python
 from sass import dart_sass
-dart_sass.sass_command = '/special/sass'
+dart_sass.sass_command = ['/special/sass']
+
+# to use npm sass, use:
+dart_sass.sass_command = ['npx', 'sass']
 ```
