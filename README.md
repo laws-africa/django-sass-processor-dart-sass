@@ -41,3 +41,9 @@ dart_sass.sass_command = ['/special/sass']
 # to use npm sass, use:
 dart_sass.sass_command = ['npx', 'sass']
 ```
+
+# Build and release
+
+Build: `python3 -m build`
+
+Release to Pypi: `python3 -m twine upload dist/*`
