@@ -1,4 +1,5 @@
 import subprocess
+from os.path import splitext
 from tempfile import NamedTemporaryFile
 
 
@@ -12,7 +13,8 @@ class DartSass:
         includes = [['-I', x] for x in include_paths]
         includes = [p for pp in includes for p in pp]
 
-        with NamedTemporaryFile() as outf:
+        outfname = splitext(filename)[0] + '.css'
+        with open(outfname, 'w+') as outf:
             cmd = self.sass_command + [
                 filename + ":" + outf.name,
                 *includes,
