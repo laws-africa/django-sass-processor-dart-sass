@@ -25,7 +25,7 @@ Install Dart Sass by following their [instructions](https://sass-lang.com/instal
 Install this package:
 
 ```bash
-pip install https://github.com/laws-africa/django-sass-processor-dart-sass
+pip install django-sass-processor-dart-sass
 ```
 
 That's it. Install and use `django-sass-processor` as normal.
